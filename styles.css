@@ -38,5 +38,16 @@ html,body {
     bottom: 10px;
 }
 
+.profile-picture {
+    border-radius: 50%;
+    height: 75px;
+}
+
+#img-btn {
+    border: none;
+    background-color: transparent;
+}
+
+
 
 

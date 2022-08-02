@@ -40,8 +40,19 @@ document.getElementById('roblox-username-submit').addEventListener('click', asyn
   replaceText("roblox-info-id", "Roblox Id: " + user.id)
   replaceText("roblox-info-groups", "USMC Groups: " + user.USMCgroups)
   replaceText("roblox-info-usmcrank", "USMC Rank: " + user.USMCrank)
+  
+  const loadImage = src =>
+    new Promise((resolve, reject) => {
+      const img = new Image();
+      img.onload = () => resolve(img);
+      img.onerror = reject;
+      img.src = src;
+  })  
 
-
+  const img = await loadImage(user.profilePictureURL)
+  img.classList.add('profile-picture')
+  document.getElementById('roblox-info-title').prepend(img)
+  
   document.getElementById('loading-spinner').hidden = true; 
   document.getElementById('roblox-username-submit').removeAttribute("disabled")
   element.hidden = false
