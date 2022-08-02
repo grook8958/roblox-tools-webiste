@@ -15,8 +15,13 @@
     <p>
       <h3>This page does not support HTTPS</h3>
       This page	does not support HTTPS due to roblox not having a CORS policy so I had to make my own proxy which does not have HTTPS.
-      <a href="http://roblox-tools.uk/">Click here to redirect</a>
+      <button onclick="changePage('http')">Click here to redirect</button>
     </p>
+    <script>
+        function changePage(protocol) {
+            window.location.replace(`${protocol}://roblox-tools.uk`)
+        }
+    </script>
   </body>
 </body>
 </html>
