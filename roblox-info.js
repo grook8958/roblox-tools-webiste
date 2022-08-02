@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('roblox-info').hidden = true;
   //check protocol
   console.log(window.location)
-  if (window.location.protocol === "https") {
+  if (window.location.protocol === "https:") {
     window.location.replace('./no-https.html')
   }
 })
