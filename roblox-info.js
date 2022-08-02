@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById("error-alert").hidden = true;
   document.getElementById('loading-spinner').hidden = true;
   document.getElementById('roblox-info').hidden = true;
+  //check protocol
   console.log(window.location)
   if (window.location.protocol === "https") {
     window.location.replace('./no-https.html')
