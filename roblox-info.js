@@ -19,7 +19,7 @@ document.getElementById('roblox-username-submit').addEventListener('click', asyn
   element.hidden = true
   document.getElementById("error-alert").hidden = true;
   document.getElementById('loading-spinner').hidden = false;
-  const res = await fetch(`https://nameless-retreat-25452.herokuapp.com/username/${document.getElementById('roblox-username-input').value}`)
+  const res = await fetch(`https://api.roblox-tools.uk/username/${document.getElementById('roblox-username-input').value}`)
   const data = await res.json();
 
   if (data.status === 403) {
