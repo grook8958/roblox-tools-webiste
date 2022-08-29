@@ -61,6 +61,23 @@
     </div>
     </div>
     <script src="roblox-info.js"></script>
+    <script src="copy-format.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script name="tippy" src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+  <script type="module">
+    tippy(document.getElementById("copy-format-btn"), {
+            content: "Copied",
+            placement:'top',
+            trigger: 'click',
+            delay: [0, 1000],
+            theme: 'green',
+            animation: "fade",
+            onShow(instance) {
+              setTimeout(() => { instance.hide() }, 3000)
+            }
+            
+    })
+  </script>
   </body>
 </body>
 </html>
