@@ -40,7 +40,7 @@ document.getElementById('roblox-username-submit').addEventListener('click', asyn
   replaceText("roblox-info-username", "Username: " + user.username)
   replaceText("roblox-info-displayname", "Display Name: " + user.displayName)
   replaceText("roblox-info-pastusernames", "Past Usernames: " + user.pastUsernames)
-  replaceText("roblox-info-id", "Roblox Id: " + user.id)
+  replaceText("roblox-info-id", "Roblox ID: " + user.id)
   replaceText("roblox-info-groups", "USMC Groups: " + user.USMCgroups)
   replaceText("roblox-info-usmcrank", "USMC Rank: " + user.USMCrank)
   
