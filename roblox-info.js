@@ -13,6 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.getElementById('roblox-username-submit').addEventListener('click', async () => {
+  for (const children of document.getElementById('roblox-info-title').children) {
+    if (children.tagName === 'IMG') children.remove();
+  }
   document.getElementById('roblox-username-submit').setAttribute("disabled", "any")
   const element = document.getElementById('roblox-info')
   //Do stuff
@@ -51,7 +54,7 @@ document.getElementById('roblox-username-submit').addEventListener('click', asyn
 
   const img = await loadImage(user.profilePictureURL)
   img.classList.add('profile-picture')
-  document.getElementById('roblox-info-title').prepend(img)
+  document.getElementById('roblox-info-title').prepend(img);
   
   document.getElementById('loading-spinner').hidden = true; 
   document.getElementById('roblox-username-submit').removeAttribute("disabled")
