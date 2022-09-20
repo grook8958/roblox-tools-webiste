@@ -23,9 +23,16 @@ document.getElementById('roblox-username-submit').addEventListener('click', asyn
   document.getElementById("error-alert").hidden = true;
   document.getElementById('loading-spinner').hidden = false;
   const res = await fetch(`https://roblox-tools-api.herokuapp.com/username/${document.getElementById('roblox-username-input').value}`)
+    .catch(err => {
+      document.getElementById('loading-spinner').hidden = true;
+      replaceText("error-alert", err)
+      document.getElementById("error-alert").hidden = false;
+      document.getElementById('roblox-username-submit').removeAttribute("disabled")
+      return
+    })
   const data = await res.json();
 
-  if (data.status === 403) {
+  if (data.status === 400) {
     document.getElementById('loading-spinner').hidden = true;
     replaceText("error-alert", data.message)
     document.getElementById("error-alert").hidden = false;
