@@ -30,11 +30,13 @@ document.getElementById('roblox-username-submit').addEventListener('click', asyn
       document.getElementById('roblox-username-submit').removeAttribute("disabled")
       return
     })
-  const data = await res.json();
 
+  
+  const data = await res.json()
+  console.log(data)
   if (data.status === 400) {
     document.getElementById('loading-spinner').hidden = true;
-    replaceText("error-alert", data.message)
+    replaceText("error-alert", data.error)
     document.getElementById("error-alert").hidden = false;
     document.getElementById('roblox-username-submit').removeAttribute("disabled")
     return
