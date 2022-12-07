@@ -22,7 +22,7 @@ document.getElementById('roblox-username-submit').addEventListener('click', asyn
   element.hidden = true
   document.getElementById("error-alert").hidden = true;
   document.getElementById('loading-spinner').hidden = false;
-  const res = await fetch(`https://roblox-tools-api.herokuapp.com/username/${document.getElementById('roblox-username-input').value}`)
+  const res = await fetch(`https://roblox-tools-api.onrender.com/username/${document.getElementById('roblox-username-input').value}`)
     .catch(err => {
       document.getElementById('loading-spinner').hidden = true;
       replaceText("error-alert", err)
